@@ -18,6 +18,7 @@ class Task_3_1
     private static function getMaxElementUsingForLoop(): int
     {
         $maxValue = self::NUMBERS[0];
+
         for ($i = 0; $i < count(self::NUMBERS); $i++) {
             if ($maxValue >= self::NUMBERS[$i]) continue;
 

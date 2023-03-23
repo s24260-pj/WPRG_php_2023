@@ -16,5 +16,4 @@ class Task_2_1
     }
 }
 
-
 echo Task_2_1::getRandomArrayValue(Task_2_1::MAX_ARRAY_SIZE - 3);
