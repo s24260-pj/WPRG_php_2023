@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="file.php" method="post">
+  <label for="path">Get Path: </label>
+  <input type="text" name="path" id="path">
+  <br>
+  <label for="folder_name">Get folder name: </label>
+  <input type="text" name="folder_name" id="folder_name">
+  <br>
+  <label for="action">Select Action: </label>
+  <select name="action" id="action">
+    <option value="1">read</option>
+    <option value="2">delete</option>
+    <option value="3">create</option>
+  </select>
+  <input type="submit" value="Make Action">
+</form>
+</body>
+</html>

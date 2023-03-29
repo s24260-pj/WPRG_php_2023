@@ -1,5 +1,4 @@
 <?php
-var_dump($_SESSION);
 $peopleQuantity = $_SESSION["people_quantity"];
 $firstName = $_SESSION["first_name"];
 $secondName = $_SESSION["second_name"];
