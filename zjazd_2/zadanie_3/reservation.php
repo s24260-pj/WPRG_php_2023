@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $peopleQuantity = $_SESSION["people_quantity"];
 $firstName = $_SESSION["first_name"];
 $secondName = $_SESSION["second_name"];
@@ -43,7 +45,7 @@ session_destroy();
         <?php } ?>
     </div>
     <hr>
-    <?php if (empty($_POST)) { ?>
+    <?php if (!empty($_POST)) { ?>
         <?php for ($i = 0; $i < $peopleQuantity; $i++) { ?>
             <h2>Person <?= $i + 1 ?> : </h2>
             <p>First Name: <?= $_POST["first_name_" . $i] ?></p>

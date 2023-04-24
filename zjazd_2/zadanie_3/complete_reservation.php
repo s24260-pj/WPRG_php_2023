@@ -1,6 +1,8 @@
 <?php
 session_start();
+
 $peopleQuantity = $_POST["people_quantity"] ?? 0;
+$_SESSION['people_quantity'] = $peopleQuantity;
 $_SESSION['first_name'] = $_POST["first_name"] ?? "";
 $_SESSION['second_name'] = $_POST["second_name"] ?? "";
 $_SESSION['address'] = $_POST["address"] ?? "";
@@ -9,8 +11,11 @@ $_SESSION["email"] = $_POST["email"] ?? "";
 $_SESSION["date"] = $_POST["date"] ?? "";
 $_SESSION["hour_of_arrival"] = $_POST["hour_of_arrival"] ?? "";
 
-if (!empty($_POST["extra_bed_for_child"]) && !empty($_POST["amenities"])) {
+if (!empty($_POST["extra_bed_for_child"])) {
     $_SESSION["extra_bed_for_child"] = $_POST["extra_bed_for_child"];
+}
+
+if (!empty($_POST["amenities"])) {
     $_SESSION["amenities"] = $_POST["amenities"];
 }
 ?>
@@ -25,7 +30,7 @@ if (!empty($_POST["extra_bed_for_child"]) && !empty($_POST["amenities"])) {
     <title>Document</title>
 </head>
 <body>
-<form action="reservation.php">
+<form action="reservation.php" method="POST">
     <?php for ($i = 0; $i < $peopleQuantity; $i++) { ?>
         <label for="first_name_<?= $i ?>">First name:</label>
         <input type="text" name="first_name_<?= $i ?>" id="first_name_<?= $i ?>" required>
